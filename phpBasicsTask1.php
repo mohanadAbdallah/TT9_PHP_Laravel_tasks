@@ -58,6 +58,7 @@ function findNearestTo100($num1, $num2) {
     if ($dist1 < $dist2) {
         return $num1;
     } else {
+    
         return $num2;
     }
 }
