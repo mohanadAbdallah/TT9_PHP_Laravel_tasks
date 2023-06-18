@@ -47,6 +47,26 @@ $largest = $num1;
     echo "The largest number among $num1, $num2, and $num3 is: $largest <br/><br/>";
 
 // 5- Write a PHP program to check which number nearest to the value 100 among two given integers. Return 0 if the two numbers are equal.
+function findNearestTo100($num1, $num2) {
+    if ($num1 === $num2) {
+        return 0;
+    }
+
+    $dist1 = abs(100 - $num1);
+    $dist2 = abs(100 - $num2);
+
+    if ($dist1 < $dist2) {
+        return $num1;
+    } else {
+        return $num2;
+    }
+}
+
+// Usage example:
+$num1 = 95;
+$num2 = 110;
+$nearestTo100 = findNearestTo100($num1, $num2);
+echo "The number nearest to 100 among $num1 and $num2 is: $nearestTo100 <br/><br/>";
 
 // 6- Write a PHP program to find the larger value from two positive integer values that is in the range 20-30 inclusive or return 0 if neither is in that range.
 
