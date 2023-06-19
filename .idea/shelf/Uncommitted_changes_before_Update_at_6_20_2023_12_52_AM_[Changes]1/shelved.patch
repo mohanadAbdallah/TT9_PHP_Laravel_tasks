@@ -1,0 +1,164 @@
+Index: basics.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\n$string = \"hello mohanad\";\r\n\r\n$j=0;\r\n\r\nwhile(!empty($string[$j])){\r\n    $j++;\r\n}\r\nfor( $i=($j-1) ; $i>=0 ; $i--){\r\n    echo $string[$i];\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/basics.php b/basics.php
+--- a/basics.php	
++++ b/basics.php	
+@@ -1,12 +1,56 @@
+ <?php
++// Arrays is php ....
++
++//$arr =
++//    [
++//        'name' => 'mohanad',
++//        'age' => 25.5,
++//        'address' => 'palestine / Gaza'
++//    ];
++//
++//foreach ($arr as $key => $value ){
++//    echo strtoupper($key)  ." : " . strtoupper($value) . "<br/>";
++//}
++//
++//function add_some_extra(&$string)
++//{
++//    $string .= 'and something extra.';
++//}
++//$str = 'This is a string, ';
++//add_some_extra($string);
++//echo $str;  // outputs 'This is a string, and something extra.'
++//
+ 
+-$string = "hello mohanad";
+ 
+-$j=0;
++$array = array(
++    1 => 'a',
++    '1' => 'b', // the value "a" will be overwritten by "b"
++    1.5 => 'c', // the value "b" will be overwritten by "c"
++    -1 => 'd',
++    '01' => 'e', // as this is not an integer string it will NOT override the key for 1
++    '1.5' => 'f', // as this is not an integer string it will NOT override the key for 1
++    true => 'g', // the value "c" will be overwritten by "g"
++    false => 'h',
++    '' => 'i',
++    null => 'j', // the value "i" will be overwritten by "j"
++    'k',  // value "k" is assigned the key 2.
++    2 => 'l', // the value "k" will be overwritten by "l"
++);
++[$a, $b] = $array;
+ 
+-while(!empty($string[$j])){
+-    $j++;
++echo '<pre>';
++
++var_dump($array, $a, $b);
++$arr = ['a', 'b', 'c', 'd'];
++$ARR = array_map('strtoupper', $arr);
++
++echo '<pre>';
++var_dump($ARR);
++echo '<pre>';
++
++function sum($a,$b,...$numbers)
++{
++    return array_sum($numbers);
+ }
+-for( $i=($j-1) ; $i>=0 ; $i--){
+-    echo $string[$i];
+-}
+\ No newline at end of file
++
++echo sum(1,2,3,4);
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	
++++ b/.idea/.gitignore	
+@@ -0,0 +1,8 @@
++# Default ignored files
++/shelf/
++/workspace.xml
++# Editor-based HTTP Client requests
++/httpRequests/
++# Datasource local storage ignored files
++/dataSources/
++/dataSources.local.xml
+Index: .idea/php_basics.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/php_basics.iml b/.idea/php_basics.iml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/php_basics.iml	
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$" />
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/vcs.xml	
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/php.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/php.xml b/.idea/php.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/php.xml	
+@@ -0,0 +1,4 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	
++++ b/.idea/modules.xml	
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/php_basics.iml" filepath="$PROJECT_DIR$/.idea/php_basics.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
