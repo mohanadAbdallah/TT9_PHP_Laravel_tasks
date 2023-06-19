@@ -1,4 +1,4 @@
-<?php 
+<?php
 //php basics exercise ..
 
 // 1- Write a PHP program to check whether the first two characters and last two characters of a give string are same.
@@ -15,7 +15,7 @@ if(substr($string, 0, 2) === substr($string, -2, 2)){
 $string = "Go To school !!";
 
 if (substr($string, 0, 2) === 'Go'){
-  echo "$string starts with 'Go'. <br/><br/>";
+    echo "$string starts with 'Go'. <br/><br/>";
 } else{
     echo "$string does not start with 'Go'.<br/><br/>";
 }
@@ -36,15 +36,15 @@ $num3 = 32;
 
 $largest = $num1;
 
-    if ($num2 > $largest) {
-        $largest = $num2;
-    }
+if ($num2 > $largest) {
+    $largest = $num2;
+}
 
-    if ($num3 > $largest) {
-        $largest = $num3;
-    }
+if ($num3 > $largest) {
+    $largest = $num3;
+}
 
-    echo "The largest number among $num1, $num2, and $num3 is: $largest <br/><br/>";
+echo "The largest number among $num1, $num2, and $num3 is: $largest <br/><br/>";
 
 // 5- Write a PHP program to check which number nearest to the value 100 among two given integers. Return 0 if the two numbers are equal.
 function findNearestTo100($num1, $num2) {
@@ -58,7 +58,6 @@ function findNearestTo100($num1, $num2) {
     if ($dist1 < $dist2) {
         return $num1;
     } else {
-    
         return $num2;
     }
 }
@@ -132,10 +131,10 @@ echo "Sum of digits of $number is: $sum <br/><br/>";
 
 $string = "Hello, World!";
 
-    $reversed = '';
-  
-    for ($i = strlen($string) - 1; $i >= 0; $i--) {
-        $reversed .= substr($string, $i, 1);
-    }
-  
-    echo "The reverse of ' " . $string . " ' is : ". $reversed;
+$reversed = '';
+
+for ($i = strlen($string) - 1; $i >= 0; $i--) {
+    $reversed .= substr($string, $i, 1);
+}
+
+echo "The reverse of ' " . $string . " ' is : ". $reversed;
