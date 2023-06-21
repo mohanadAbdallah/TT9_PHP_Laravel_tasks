@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfeeabba-4ec1-4e11-9bbd-1bb32c5ab042" name="Changes" comment="undo deletion modification">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php_basics.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/phpBasicsTask2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +46,8 @@
       <workItem from="1687094171498" duration="6114000" />
       <workItem from="1687161922433" duration="8226000" />
       <workItem from="1687207551266" duration="210000" />
-      <workItem from="1687207822211" duration="4502000" />
+      <workItem from="1687207822211" duration="5052000" />
+      <workItem from="1687212965614" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="last modification">
       <created>1687211071284</created>
