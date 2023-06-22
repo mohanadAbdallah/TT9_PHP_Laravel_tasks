@@ -8,9 +8,9 @@ class Str
 
     public readonly string $value;
     
-    public function __construct(string $str)
+    public function __construct(string $value)
     {
-        $this->value = $str;
+        $this->value = $value;
     }
 
     public function length ()  :int
@@ -18,9 +18,9 @@ class Str
         return strlen($this->value);
     
     }
-    public function equal($str)
+    public function equal($value)
     {
-        return $this->value === $str;
+        return $this->value === $value;
     }
     public function getValue(){
         return $this->value;
@@ -28,5 +28,7 @@ class Str
 
 }
 $str = new Str('mohanad');
+$str2 = new Str('mohanad2');
 echo "<pre>";
 var_dump($str->length(), $str->equal('hany'),$str->getvalue());
+var_dump($str2->length(), $str2->equal('hany'),$str->getvalue());
